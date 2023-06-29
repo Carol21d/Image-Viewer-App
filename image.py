@@ -15,7 +15,7 @@ my_img_5 = ImageTk.PhotoImage(Image.open("ornitorrinco.jpg"))
 
 image_list = [my_img, my_img_2, my_img_3, my_img_4, my_img_5]
 
-status = Label(root, text="1 of 5")
+status = Label(root, text="1 of " + str(len(image_list)))
 
 my_label = Label(image=my_img)
 my_label.grid(row=0, column=0, columnspan=3)
@@ -64,6 +64,6 @@ button_forward = Button(root, text=">>", command=lambda: forward(2))
 button_back.grid(row=1, column=0)
 button_exit.grid(row=1, column=1)
 button_forward.grid(row=1, column=2)
-
+status.grid(row=2, columnspan=3)
 
 root.mainloop()
