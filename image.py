@@ -37,8 +37,8 @@ def forward(image_number):
     my_label.grid(row=0, column=0, columnspan=3)
     button_back.grid(row=1, column=0)
     button_forward.grid(row=1, column=2)
-    status = Label(root, text=" " + str(image_number) +
-                   " " + str(len(image_list)))
+    status = Label(root, text="Image " + str(image_number) +
+                   " of  " + str(len(image_list)))
     status.grid(row=2, columnspan=3, sticky=W+E)
 
 
